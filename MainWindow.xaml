@@ -1,0 +1,43 @@
+﻿<Window x:Class="ContractExtractorApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="استخراج اطلاعات قرارداد" Height="600" Width="900" Foreground="#888"
+        Background="#1E1E1E" FontFamily="Segoe UI" FontSize="14">
+
+    <Window.Resources>
+        <ResourceDictionary Source="Styles/Styles.xaml"/>
+    </Window.Resources>
+
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <!-- دکمه‌ها -->
+        <StackPanel Grid.Row="0" Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,20">
+            <Button Style="{StaticResource PrimaryButton}" Name="btnSelectPdf" Content="📄 انتخاب فایل PDF" Click="btnSelectPdf_Click" Margin="10"/>
+            <Button Style="{StaticResource PrimaryButton}" Name="btnSelectWord" Content="📄 انتخاب فایل Word" Click="btnSelectWord_Click" Margin="10"/>
+            <Button Style="{StaticResource PrimaryButton}" Name="btnExportExcel" Content="📊 استخراج و خروجی Excel" Click="btnExportExcel_Click" Margin="10"/>
+        </StackPanel>
+
+        <!-- وضعیت -->
+        <TextBlock Name="txtStatus" Grid.Row="1" HorizontalAlignment="Center" Foreground="#CCCCCC" Margin="0,10"/>
+
+        <!-- جدول داده -->
+        <DataGrid Name="dataGridPreview" Grid.Row="2" Margin="0,10" AutoGenerateColumns="True"
+                  Background="#2D2D30" Foreground="White" 
+                  RowBackground="#3C3C3C" AlternatingRowBackground="#2D2D30"
+                  GridLinesVisibility="None" HeadersVisibility="All"
+                  BorderBrush="#555" FontSize="13"/>
+
+        <!-- امضای پایین -->
+        <TextBlock Grid.Row="3" HorizontalAlignment="Left" VerticalAlignment="Center" 
+                   Foreground="#888" FontSize="12" Margin="5">
+            Developer: Amirhossein Fadaee (09362167779)
+        </TextBlock>
+    </Grid>
+</Window>
+

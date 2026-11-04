@@ -1,0 +1,35 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <!-- استایل دکمه اصلی -->
+    <Style x:Key="PrimaryButton" TargetType="Button">
+        <Setter Property="FontSize" Value="14"/>
+        <Setter Property="Padding" Value="10,5"/>
+        <Setter Property="Background" Value="#0078D7"/>
+        <Setter Property="Foreground" Value="White"/>
+        <Setter Property="Margin" Value="5"/>
+        <Setter Property="BorderBrush" Value="#004C9B"/>
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="Cursor" Value="Hand"/>
+        <Setter Property="FontWeight" Value="Bold"/>
+        <Setter Property="Effect">
+            <Setter.Value>
+                <DropShadowEffect BlurRadius="8" ShadowDepth="2" Opacity="0.3"/>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border Background="{TemplateBinding Background}" 
+                            BorderBrush="{TemplateBinding BorderBrush}" 
+                            BorderThickness="{TemplateBinding BorderThickness}" 
+                            CornerRadius="8">
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+</ResourceDictionary>
+
